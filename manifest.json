@@ -1,0 +1,29 @@
+{
+    "name": "Bionic Font Converter",
+    "version": "1.0",
+    "description": "Converts text in the browser to Bionic font.",
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+      },
+    "permissions": [
+      "activeTab"
+    ],
+    "manifest_version": 3,
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+   
+    "web_accessible_resources": [
+        {
+          "resources": ["fonts/SpaceMono-Regular.ttf"],
+          "matches": ["<all_urls>"]
+        }
+      ]
+  }
+  
