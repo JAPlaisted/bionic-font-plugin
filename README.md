@@ -1,6 +1,8 @@
 ## Bionic Font Converter
 Bionic Font Converter is a Chrome plugin that changes all the fonts in the browser to the Bionic font, a productivity font designed to help users read faster.
 
+This product is currently under review via Chrome Webstore
+
 ## Installation
 To install Bionic Font Converter, follow these steps:
 
