@@ -1,5 +1,16 @@
 ## Bionic Font Converter
-Bionic Font Converter is a Chrome plugin that changes all the fonts in the browser to the Bionic font, a productivity font designed to help users read faster.
+
+This is a chrome plugin that applies a custom font and a text effect to all text on a webpage. The custom font used is "Space Mono", which is loaded using the FontFace API. The text effect adds a bolded first three letters to each word by wrapping each word in a span and adding the data-before attribute to the first three letters.
+
+The plugin includes a toggle button that allows users to turn the text effect and custom font on and off. When the button is clicked, the bolded first three letters and the custom font are either enabled or disabled based on their current state.
+
+The plugin code also includes a helper function, getTextNodes, that returns an array of all text nodes in a given DOM node. This function is used to retrieve all text nodes in the document.body and apply the custom font and text effect to them.
+
+The updateStyle function is responsible for applying the CSS styles that implement the text effect and custom font. The function generates a CSS rule that targets all span elements and makes the first three letters bold using the content and font-weight properties. It also sets the font family of the body element to "Space Mono" if the spaceMonoFontEnabled variable is true, and to "unset" if it is false. The generated CSS rule is then added to a style element in the head of the document.
+
+If a style element with the id "font-effect-style" already exists in the head, the updateStyle function simply updates the content of the style element. Otherwise, it creates a new style element and appends it to the head with the generated CSS rule.
+
+Overall, this plugin offers a simple and elegant way to customize the look and feel of text on any webpage.
 
 This product is currently under review via Chrome Webstore
 
